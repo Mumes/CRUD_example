@@ -27,7 +27,7 @@
     if($row)
     {
         $_SESSION['success'] = 'Вход успешен';
-        $_SESSION['name'] = htmlentities($row['name']);
+        $_SESSION['name'] = htmlentities($row['user_id']);
         header( 'Location: index.php' ) ;
     }
     else

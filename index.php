@@ -32,6 +32,24 @@ else
    <p><a href="logout.php">Выйти</a> из сессии.</p>
 
 <?php
+    echo('<table border="1">'."\n");
+    $sql = "SELECT * FROM autos WHERE user_id=".$_SESSION['name'];
+    $stmt = $pdo->query($sql);
+    while ( $row = $stmt->fetch(PDO::FETCH_ASSOC) ) {
+        echo "<tr><td>";
+        echo(htmlentities($row['make']));
+        echo("</td><td>");
+        echo(htmlentities($row['model']));
+        echo("</td><td>");
+        echo(htmlentities($row['year']));
+        echo("</td><td>");
+        echo(htmlentities($row['mileage']));
+        echo("</td><td>");
+        echo('<a href="edit.php?user_id='.$row['user_id'].'">Edit</a> / ');
+        echo('<a href="delete.php?user_id='.$row['user_id'].'">Delete</a>');
+        echo("</td></tr>\n");
+    }
 }
+
 ?>
 </html>
