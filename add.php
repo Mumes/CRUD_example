@@ -61,5 +61,5 @@
  <p>Пробег:
  <input type="text" name="milage"></p>
  <p><input type="submit" value="Добавить"/>
- <a href="index.php">Cancel</a></p>
+ <a href="index.php">Отмена</a></p>
  </form>

@@ -54,5 +54,5 @@ if ( isset($_SESSION['error']) )
 <p>Пароль:
 <input type="password" name="password"></p>
 <p><input type="submit" value="Войти"/>
-<a href="index.php">Cancel</a></p>
+<a href="index.php">Отмена</a></p>
 </form>
